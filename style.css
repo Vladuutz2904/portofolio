@@ -347,6 +347,11 @@ footer {
         max-width: 100%;
         text-align: center;
     }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Acum afiseaza o singura coloana */
+        gap: 1rem; /* Spatiul dintre elemente, putin mai mic */
+    }
 }
 
 @keyframes slideDown {
