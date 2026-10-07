@@ -4,52 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site-uri web - Portofoliu</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portofoliu.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo">Portofoliu</div>
-        <nav id="nav-menu">
+        <a class="logo" href="index.html">Portofoliu</a>
+        <nav id="nav-menu" aria-label="Navigare principală">
             <ul>
                 <li><a href="index.html">Acasă</a></li>
                 <li><a href="index.html#portofoliu">Portofoliu</a></li>
             </ul>
         </nav>
-        <div class="burger-menu" id="burger-btn">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <button class="burger-menu" id="burger-btn" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
 
     <main>
         <section class="portfolio-page">
-            <h1 class="page-title">Toate Site-urile web</h1>
+            <div class="page-head">
+                <h1 class="page-title">Toate site-urile web</h1>
+                <p class="lead">Două proiecte făcute de mine, fiecare cu link către versiunea live.</p>
+            </div>
+
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="site1.png" alt="Site 1">
-                    <a href="https://void-craft.vercel.app" class="view-more">Vezi mai multe</a>
+                <article class="portfolio-item">
+                    <a class="frame" href="https://void-craft.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <div class="frame-bar">
+                            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <span class="url">void-craft.vercel.app</span>
+                        </div>
+                        <img src="site1.png" alt="Captură de ecran a site-ului Site 1" loading="lazy">
+                    </a>
                     <div class="item-info">
                         <h3>Site 1</h3>
+                        <a href="https://void-craft.vercel.app" class="view-more" target="_blank" rel="noopener">Deschide site-ul</a>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="site2.png" alt="Site 2">
-                    <a href="https://html-starter-rho-eight-25.vercel.app" class="view-more">Vezi mai multe</a>
+                </article>
+
+                <article class="portfolio-item">
+                    <a class="frame" href="https://html-starter-rho-eight-25.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <div class="frame-bar">
+                            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <span class="url">html-starter-rho-eight-25.vercel.app</span>
+                        </div>
+                        <img src="site2.png" alt="Captură de ecran a site-ului Site 2" loading="lazy">
+                    </a>
                     <div class="item-info">
                         <h3>Site 2</h3>
+                        <a href="https://html-starter-rho-eight-25.vercel.app" class="view-more" target="_blank" rel="noopener">Deschide site-ul</a>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 _vladuu_. Toate drepturile rezervate.</p>
+        <p>&copy; 2026 _vladuu_. Toate drepturile rezervate.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        (function () {
+            var btn = document.getElementById('burger-btn');
+            var menu = document.getElementById('nav-menu');
+            function setOpen(open) {
+                menu.classList.toggle('open', open);
+                btn.classList.toggle('open', open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Închide meniul' : 'Deschide meniul');
+            }
+            btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+            menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+        })();
+    </script>
 </body>
 </html>
