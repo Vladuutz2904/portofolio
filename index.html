@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numele Tău - Portfolio Design Minecraft</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Vladuutz - Designer pentru servere de Minecraft</title>
+    <meta name="description" content="Logouri, site-uri web și design de store-uri pentru servere de Minecraft.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo">Portofoliu</div>
-        <nav id="nav-menu">
+        <a class="logo" href="#acasa">Vladuutz</a>
+        <nav id="nav-menu" aria-label="Navigare principală">
             <ul>
                 <li><a href="#acasa" class="active">Acasă</a></li>
                 <li><a href="#despre">Despre mine</a></li>
@@ -19,71 +22,133 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="burger-menu" id="burger-btn">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <button class="burger-menu" id="burger-btn" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
 
     <main>
         <section id="acasa" class="hero-section">
-            <img src="https://visage.surgeplay.com/bust/300/Vladuutz" alt="Avatarul meu" class="avatar">
-            <h1>Salut, sunt Vladuutz!</h1>
-            <p>Sunt un designer specializat în crearea de identități vizuale pentru serverele de Minecraft. Mă ocup de **logouri, site-uri web și design de store-uri**.</p>
+            <div class="hero-text">
+                <h1>Salut, sunt Vladuutz!</h1>
+                <p class="lead">Sunt designer specializat în identități vizuale pentru serverele de Minecraft. Mă ocup de <strong>logouri, site-uri web și design de store-uri</strong>.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#contact">Scrie-mi pe Discord</a>
+                    <a class="btn btn-ghost" href="#portofoliu">Vezi proiectele</a>
+                </div>
+            </div>
+            <div class="avatar-wrap">
+                <img src="https://visage.surgeplay.com/bust/300/Vladuutz" alt="Avatarul meu de Minecraft" class="avatar">
+            </div>
         </section>
 
-        <section id="despre" class="about-section">
+        <section id="despre" class="about-section section">
             <div class="about-content">
-                <h2>Despre Mine</h2>
+                <h2>Despre mine</h2>
                 <p>Am început să creez design-uri pentru Minecraft din pasiune, transformând rapid un hobby într-o meserie. Îmi place să lucrez cu comunități de gaming pentru a le oferi o prezență online profesională și memorabilă.</p>
                 <p>Fiecare proiect este o nouă provocare pentru mine, și mă asigur că rezultatul final depășește așteptările, aducând un plus de valoare și originalitate fiecărui server. Prin design, ajut la construirea unei identități puternice, de la primul logo până la un site web complet funcțional.</p>
             </div>
             <img src="1.png" alt="Render cu skin-ul meu de Minecraft" class="minecraft-render">
         </section>
 
-        <section id="portofoliu">
-            <h2>Proiectele Mele</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="logo1.png" alt="Logo Server">
-                    <a href="logos.html" class="view-more">Vezi mai multe</a>
+        <section id="portofoliu" class="section">
+            <h2>Proiectele mele</h2>
+            <div class="portfolio-grid three">
+                <article class="portfolio-item">
+                    <a class="frame contain" href="logos.html" tabindex="-1" aria-hidden="true">
+                        <img src="logo1.png" alt="Logo pentru un server de Minecraft" loading="lazy">
+                    </a>
                     <div class="item-info">
                         <h3>Logouri</h3>
+                        <a href="logos.html" class="view-more">Vezi logourile</a>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="site1.png" alt="Website Hub">
-                    <a href="websites.html" class="view-more">Vezi mai multe</a>
+                </article>
+
+                <article class="portfolio-item">
+                    <a class="frame" href="websites.html" tabindex="-1" aria-hidden="true">
+                        <img src="site1.png" alt="Site web pentru un server de Minecraft" loading="lazy">
+                    </a>
                     <div class="item-info">
                         <h3>Site-uri web</h3>
+                        <a href="websites.html" class="view-more">Vezi site-urile</a>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="bariera.png" alt="In Curand">
-                    <a href="#" class="view-more">Vezi mai multe</a>
+                </article>
+
+                <article class="portfolio-item">
+                    <div class="frame is-soon">
+                        <img src="bariera.png" alt="" loading="lazy">
+                    </div>
                     <div class="item-info">
-                        <h3>In Curand</h3>
+                        <h3>În curând</h3>
+                        <span class="soon-note">Urmează</span>
                     </div>
-                </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section contact">
             <h2>Contact</h2>
             <p>Pentru a discuta despre un proiect, mă poți contacta pe Discord.</p>
-            <p class="contact-info">_vladuu_</p>
+            <button class="discord-chip" id="copy-btn" type="button" aria-describedby="copy-hint">
+                <span class="handle">_vladuu_</span>
+                <span class="copy-hint" id="copy-hint" aria-live="polite">Copiază</span>
+            </button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 _vladuu_. Toate drepturile rezervate.</p>
+        <p>&copy; 2026 Vladuutz. Toate drepturile rezervate.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        (function () {
+            /* Meniu burger */
+            var btn = document.getElementById('burger-btn');
+            var menu = document.getElementById('nav-menu');
+            function setOpen(open) {
+                menu.classList.toggle('open', open);
+                btn.classList.toggle('open', open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Închide meniul' : 'Deschide meniul');
+            }
+            btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+            menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+
+            /* Link activ în meniu în funcție de secțiunea vizibilă */
+            var links = menu.querySelectorAll('a[href^="#"]');
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (en) {
+                        if (!en.isIntersecting) return;
+                        links.forEach(function (a) {
+                            a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+                        });
+                    });
+                }, { rootMargin: '-45% 0px -50% 0px' });
+                document.querySelectorAll('section[id]').forEach(function (s) { io.observe(s); });
+            }
+
+            /* Copiază numele de Discord */
+            var chip = document.getElementById('copy-btn');
+            var hint = document.getElementById('copy-hint');
+            function say(t) {
+                hint.textContent = t;
+                setTimeout(function () { hint.textContent = 'Copiază'; }, 2000);
+            }
+            chip.addEventListener('click', function () {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText('_vladuu_').then(
+                        function () { say('Copiat!'); },
+                        function () { say('Nu s-a putut copia'); }
+                    );
+                } else {
+                    say('Nu s-a putut copia');
+                }
+            });
+        })();
+    </script>
 </body>
-
 </html>
-
-
