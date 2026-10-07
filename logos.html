@@ -3,104 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logouri - Portofoliu</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Logouri - Vladuutz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo">Portofoliu</div>
-        <nav id="nav-menu">
+        <a class="logo" href="index.html">Vladuutz</a>
+        <nav id="nav-menu" aria-label="Navigare principală">
             <ul>
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="index.html#portofoliu">Portofoliu</a></li>
+                <li><a href="index.html#acasa">Acasă</a></li>
+                <li><a href="index.html#despre">Despre mine</a></li>
+                <li><a href="index.html#portofoliu" class="active">Portofoliu</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="burger-menu" id="burger-btn">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <button class="burger-menu" id="burger-btn" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
 
     <main>
         <section class="portfolio-page">
-            <h1 class="page-title">Toate Logourile</h1>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="logo1.png" alt="Logo 1">
+            <div class="page-head">
+                <h1 class="page-title">Toate logourile</h1>
+                <p class="lead">11 logouri făcute pentru servere de Minecraft. Apasă pe un logo ca să-l vezi mare.</p>
+            </div>
+
+            <div class="portfolio-grid three logos-grid">
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo1.png" data-title="Logo 1" aria-label="Vezi Logo 1 mare">
+                        <img src="logo1.png" alt="Logo 1" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 1</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo2.png" alt="Logo 2">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo2.png" data-title="Logo 2" aria-label="Vezi Logo 2 mare">
+                        <img src="logo2.png" alt="Logo 2" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 2</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo3.png" alt="Logo 3">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo3.png" data-title="Logo 3" aria-label="Vezi Logo 3 mare">
+                        <img src="logo3.png" alt="Logo 3" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 3</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo4.png" alt="Logo 4">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo4.png" data-title="Logo 4" aria-label="Vezi Logo 4 mare">
+                        <img src="logo4.png" alt="Logo 4" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 4</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo5.png" alt="Logo 5">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo5.png" data-title="Logo 5" aria-label="Vezi Logo 5 mare">
+                        <img src="logo5.png" alt="Logo 5" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 5</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo6.png" alt="Logo 6">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo6.png" data-title="Logo 6" aria-label="Vezi Logo 6 mare">
+                        <img src="logo6.png" alt="Logo 6" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 6</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo7.png" alt="Logo 7">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo7.png" data-title="Logo 7" aria-label="Vezi Logo 7 mare">
+                        <img src="logo7.png" alt="Logo 7" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 7</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo8.png" alt="Logo 8">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo8.png" data-title="Logo 8" aria-label="Vezi Logo 8 mare">
+                        <img src="logo8.png" alt="Logo 8" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 8</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo9.png" alt="Logo 9">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo9.png" data-title="Logo 9" aria-label="Vezi Logo 9 mare">
+                        <img src="logo9.png" alt="Logo 9" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 9</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo10.png" alt="Logo 10">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo10.png" data-title="Logo 10" aria-label="Vezi Logo 10 mare">
+                        <img src="logo10.png" alt="Logo 10" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 10</h3>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="logo11.png" alt="Logo 11">
+                </article>
+                <article class="portfolio-item">
+                    <button class="frame contain logo-card" type="button" data-src="logo11.png" data-title="Logo 11" aria-label="Vezi Logo 11 mare">
+                        <img src="logo11.png" alt="Logo 11" loading="lazy">
+                    </button>
                     <div class="item-info">
                         <h3>Logo 11</h3>
                     </div>
-                </div>
+                </article>
+            </div>
         </section>
     </main>
 
+    <dialog class="lightbox" id="lightbox" aria-label="Previzualizare logo">
+        <button class="lightbox-close" id="lightbox-close" type="button">Închide</button>
+        <img id="lightbox-img" src="" alt="">
+    </dialog>
+
     <footer>
-        <p>&copy; 2025 _vladuu_. Toate drepturile rezervate.</p>
+        <p>&copy; 2026 Vladuutz. Toate drepturile rezervate.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        (function () {
+            /* Meniu burger */
+            var btn = document.getElementById('burger-btn');
+            var menu = document.getElementById('nav-menu');
+            function setOpen(open) {
+                menu.classList.toggle('open', open);
+                btn.classList.toggle('open', open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Închide meniul' : 'Deschide meniul');
+            }
+            btn.addEventListener('click', function () { setOpen(!menu.classList.contains('open')); });
+            menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+
+            /* Logo mare */
+            var dlg = document.getElementById('lightbox');
+            var img = document.getElementById('lightbox-img');
+            document.querySelectorAll('.logo-card').forEach(function (card) {
+                card.addEventListener('click', function () {
+                    if (!dlg.showModal) { window.open(card.dataset.src, '_blank'); return; }
+                    img.src = card.dataset.src;
+                    img.alt = card.dataset.title;
+                    dlg.showModal();
+                });
+            });
+            document.getElementById('lightbox-close').addEventListener('click', function () { dlg.close(); });
+            dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+        })();
+    </script>
 </body>
 </html>
